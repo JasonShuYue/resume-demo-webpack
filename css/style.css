@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+}
+
+a {
+    text-decoration: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.site-welcome {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.site-welcome.active {
+    display: flex;
+}
+/*content*/
+
+.navTopBar-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.navTopBar {
+    padding: 20px 16px 20px 16px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Arial Black';
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+.logo > .rs {
+    margin-right: 4px;
+    color: #e6686a;
+}
+
+.logo > .card {
+    color: #9a9da2;
+}
+
+.navigator {
+    padding: 5px 0;
+}
+
+.navigator ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigator ul li {
+    margin: 0 17px;
+}
+
+.navigator ul li a {
+    color: #b7b7b7;
+    font-size: 12px;
+    text-decoration: none;
+    border-top: 3px solid transparent;
+    border-top: 3px solid transparent;
+    padding:5px 0;
+    display: block;
+}
+
+.navigator ul li a:hover {
+    border-bottom: 3px solid #e06567;
+}
+
+.Banner {
+    height: 515px;
+    background-image: url('../img/rs-cover.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.Banner .mask {
+    height: 515px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.content-container {
+    position: relative;
+    top: -340px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.user-card {
+
+    background-color: white;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+
+
+.user-card .picture-and-text {
+    padding: 50px;
+}
+
+.avatar {
+    width: 299px;
+    height: 347px;
+}
+
+.text {
+    margin-left: 65px;
+    width: 470px;
+}
+
+.text .hello {
+    display: inline-block;
+    background-color: #e6686a;
+    color: white;
+    padding: 4px 16px;
+    line-height: 22px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.text .hello::before {
+    position: absolute;
+    content:'';
+    display: inline-block;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #e6686a;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top-width: 0;
+    left: 4px;
+    top: 100%;
+}
+
+.text dt {
+    width: 30%;
+    float: left;
+    padding: 5px 0;
+    font-weight: bold;
+}
+.text dd {
+    width: 70%;
+    margin: 0;
+    float: left;
+    padding: 5px 0;
+    color: #9da0a7;
+}
+
+
+.media {
+    background-color: #E6686A;
+}
+
+.media svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align: top;
+}
+
+.media a {
+    display: inline-block;
+    width: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    border-radius: 50%;
+    margin: 16px;
+}
+
+.download-btn {
+    margin: 30px 0 20px 0;
+}
+
+.download-link {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 21px 55px;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid rgb(203, 205, 207);
+    border-radius: 3px;
+    color: #3d4451;
+}
+
+.download-link:hover {
+    opacity: 0.95;
+    text-decoration: none;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.5s;
+}
+
+.self-introduction {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+}
+
+.progress-skills {
+    padding-top: 70px;
+}
+
+.skills-wrapper {
+    padding: 40px 50px 50px 50px;
+    background-color: white;
+}
+
+.skills-wrapper li {
+    width: 48%;
+    margin-bottom: 40px;
+}
+
+.skills-wrapper li p {
+    margin: 0 0 5px 0;
+}
+
+.skills-wrapper li:nth-of-type(n) {
+    float: left;
+}
+
+.skills-wrapper li:nth-of-type(2n) {
+    float: right;
+}
+
+.skills-wrapper li:nth-last-of-type(1) {
+    margin-bottom: 0;
+}
+
+.skills-wrapper li:nth-last-of-type(2) {
+    margin-bottom: 0;
+}
+
+.skills-wrapper li .progress{
+    width: 100%;
+    background-color: rgb(252, 225, 225);
+    height: 5px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.skills-wrapper li .progress::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 80%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #e8676b;
+    border-radius: 3px;
+}
+
+
+
