@@ -53,11 +53,20 @@ ul {
 
 .navTopBar-container {
     width: 100%;
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     top: 0;
 }
 .navTopBar {
-    padding: 20px 16px 20px 16px;
+    padding: 20px 16px;
+    transition: all 0.5s;
+    color: #b7b7b7;
+}
+.navTopBar.sticky {
+    background: white;
+    padding: 10px 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #3d4451;
 }
 
 .logo {
@@ -87,12 +96,72 @@ ul {
     padding: 0;
 }
 
-.navigator ul li {
+.navigator ul .first-navigator {
     margin: 0 17px;
+    position: relative;
+    cursor: pointer;
+}
+
+.navigator ul .first-navigator:hover .sub-navigator {
+    display: block;
+    animation: secondMenuSlide 0.3s;
+}
+
+.navigator ul .first-navigator:hover a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    height: 3px;
+    background: #e06567;
+    animation: menuSlide 0.3s;
+}
+
+@keyframes menuSlide {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes secondMenuSlide {
+    0% {
+        margin-right: 100%;
+        opacity: 0;
+    }
+    100% {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+.navigator .sub-navigator {
+    position: absolute;
+    top: calc(100% + 3px);
+    right: 0;
+    display: none;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+.navigator .sub-navigator li {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+.navigator .sub-navigator li:hover {
+    color: #E6686A;
 }
 
 .navigator ul li a {
-    color: #b7b7b7;
+    position: relative;
+    color: inherit;
     font-size: 12px;
     text-decoration: none;
     border-top: 3px solid transparent;
@@ -101,9 +170,7 @@ ul {
     display: block;
 }
 
-.navigator ul li a:hover {
-    border-bottom: 3px solid #e06567;
-}
+
 
 .Banner {
     height: 515px;
@@ -235,8 +302,15 @@ ul {
     color: #000;
 }
 
+.progress-skills-title, .portfolio-title {
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
 .progress-skills {
-    padding-top: 70px;
+    margin-top: 70px;
 }
 
 .skills-wrapper {
@@ -288,6 +362,65 @@ ul {
     background-color: #e8676b;
     border-radius: 3px;
 }
+
+.portfolio nav {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+}
+
+.portfolio ul {
+    padding-left: 0px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.portfolio ul li {
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.portfolio ul li:nth-of-type(1) {
+    margin-left: 0px;
+}
+
+.portfolio .portfolioBar {
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.portfolio .portfolioBar .bar-inner {
+    height: 5px;
+    border-radius: 5px;
+    background: #e8676b;
+    transition: all 0.4s;
+}
+
+.portfolio .portfolioBar.state-1 .bar-inner {
+    width: 50px;
+    margin-left: 0;
+}
+
+.portfolio .portfolioBar.state-2 .bar-inner {
+    width: 50px;
+    margin-left: 63px;
+}
+
+.portfolio .portfolioBar.state-3 .bar-inner {
+    width: 103px;
+    margin-left: 135px;
+}
+
+.works {
+    position: relative;
+}
+
+.works .big, .works .small {
+    position: absolute;
+}
+
 
 
 

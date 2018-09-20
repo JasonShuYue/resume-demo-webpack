@@ -18,31 +18,40 @@
     </style>
 </head>
 <body>
+    <!--loading-->
     <div id="siteWelcome" class="site-welcome active">
         <div class="loading"></div>
     </div>
+    <!--navTopBar-->
     <div class="Banner">
-        <div class="navTopBar-container"><div class="navTopBar clearfix">
+        <div class="navTopBar-container"><div id="navTopBar" class="navTopBar clearfix">
             <a class="logo left" href="#">
                 <span class="rs">RS</span>
                 <span class="card">card</span>
             </a>
             <nav class="navigator right">
                 <ul class="clearfix">
-                    <li class="left"><a href="#">关于</a></li>
-                    <li class="left"><a href="#">技能</a></li>
-                    <li class="left"><a href="#">作品</a></li>
-                    <li class="left"><a href="#">博客</a></li>
-                    <li class="left"><a href="#">日历</a></li>
-                    <li class="left"><a href="#">联系方式</a></li>
-                    <li class="left"><a href="#">其他</a></li></ul>
+                    <li class="left first-navigator"><a href="#userAbout">关于</a></li>
+                    <li class="left first-navigator"><a href="#progressSkills">技能</a></li>
+                    <li class="left first-navigator">
+                        <a href="#portfolio">作品</a>
+                        <ul class="sub-navigator">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
+                    </li>
+                    <li class="left first-navigator"><a href="#">博客</a></li>
+                    <li class="left first-navigator"><a href="#">日历</a></li>
+                    <li class="left first-navigator"><a href="#">联系方式</a></li>
+                    <li class="left first-navigator"><a href="#">其他</a></li></ul>
             </nav>
         </div></div>
         <div class="mask"></div>
     </div>
 
     <div class="content-container">
-        <div class="user-card">
+        <div id="userAbout" class="user-card">
             <div class="picture-and-text clearfix">
                 <img class="avatar left" src="./img/avatar.jpg" alt="头像"/>
                 <div class="text left">
@@ -82,7 +91,7 @@
         </div>
         <div class="download-btn text-center"><a  class="download-link" href="./index.html" download>Download Resume</a></div>
         <p class="self-introduction text-center">大家好，我叫舒越，你们可以叫我Jason_Shu，初学前端，好好努力！</p>
-        <div class="progress-skills">
+        <div id="progressSkills" class="progress-skills">
             <h2 class="progress-skills-title text-center">Professional Skills</h2>
             <ul class="skills-wrapper clearfix">
                 <li ><p class="skill-name">WordPress</p><div class="progress"></div></li>
@@ -92,6 +101,28 @@
                 <li ><p class="skill-name">Drupal</p><div class="progress"></div></li>
                 <li ><p class="skill-name">Photoshop</p><div class="progress"></div></li>
             </ul>
+        </div>
+        <div id="portfolio" class="portfolio text-center">
+            <h2 class="portfolio-title text-center">Portfolio</h2>
+            <nav>
+                <ul class="clearfix text-center">
+                    <li id="portfolio1" class="left">所有</li>
+                    <li id="portfolio2" class="left">框架</li>
+                    <li id="portfolio3" class="left">原生JS&amp;CSS</li>
+                </ul>
+                <div id="portfolioBar" class="portfolioBar state-1">
+                    <div class="bar-inner "></div>
+                </div>
+            </nav>
+            <div class="works" style="height: 576px; margin-bottom: 20px;">
+                <div class="big" style="top: 0;left: 0;"><img src="./img/image1.jpg" alt="作品1"></div>
+                <div class="small" style="top: 0;left: 645px;">
+                    <img src="./img/image2.jpg" alt="作品2">
+                </div>
+                <div class="small" style="top: 298px;left: 645px;">
+                    <img src="./img/image3.jpg" alt="作品3">
+                </div>
+            </div>
         </div>
     </div>
     <script src="//at.alicdn.com/t/font_808483_c3442kk5mms.js" type="text/javascript"></script>
