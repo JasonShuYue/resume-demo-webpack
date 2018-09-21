@@ -107,7 +107,7 @@ ul {
     animation: secondMenuSlide 0.3s;
 }
 
-.navigator ul .first-navigator:hover a::after {
+.navigator ul .first-navigator:hover a::after, .navigator ul .first-navigator.heighlight a::after {
     content: '';
     display: block;
     position: absolute;
@@ -192,13 +192,31 @@ ul {
     margin: 0 auto;
 }
 
+[section-x] {
+    transform: translateY(100px);
+}
+
+[section-x].slideUp {
+    animation: slideUp 0.5s;
+    transform: translateY(0);
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .user-card {
 
     background-color: white;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
-
-
 
 .user-card .picture-and-text {
     padding: 50px;
@@ -303,6 +321,7 @@ ul {
 }
 
 .progress-skills-title, .portfolio-title {
+    margin-top: 70px;
     color: #3d4451;
     font-size: 34px;
     line-height: 1.2;
@@ -349,6 +368,7 @@ ul {
     height: 5px;
     border-radius: 3px;
     position: relative;
+    overflow: hidden;
 }
 
 .skills-wrapper li .progress::after{
@@ -361,6 +381,12 @@ ul {
     left: 0;
     background-color: #e8676b;
     border-radius: 3px;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.progress-skills.slideUp .skills-wrapper li .progress::after {
+    transform: translateX(0);
 }
 
 .portfolio nav {
