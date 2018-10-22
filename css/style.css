@@ -410,41 +410,11 @@ ul {
     margin-left: 0px;
 }
 
-.portfolio .portfolioBar {
-    height: 5px;
-    background: white;
-    border-radius: 5px;
-    margin-top: 10px;
-}
 
-.portfolio .portfolioBar .bar-inner {
-    height: 5px;
-    border-radius: 5px;
-    background: #e8676b;
-    transition: all 0.4s;
-}
 
-.portfolio .portfolioBar.state-1 .bar-inner {
-    width: 50px;
-    margin-left: 0;
-}
-
-.portfolio .portfolioBar.state-2 .bar-inner {
-    width: 50px;
-    margin-left: 63px;
-}
-
-.portfolio .portfolioBar.state-3 .bar-inner {
-    width: 103px;
-    margin-left: 135px;
-}
-
-.works {
-    position: relative;
-}
-
-.works .big, .works .small {
-    position: absolute;
+.swiper-container {
+    width: 940px;
+    height: 470px;
 }
 
 
