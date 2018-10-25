@@ -15,11 +15,12 @@
             return query.find();
         },
         //  保存数据
-        save: function(content) {
+        save: function(obj) {
             let Message = AV.Object.extend('Message');
             let message = new Message();
             return message.save({
-                content: content
+                name: obj.name,
+                content: obj.content,
             });
         },
     };
@@ -42,7 +43,7 @@
                 });
                 contentArr.forEach( (item) => {
                     let li = document.createElement("li");
-                    li.innerText = item.content;
+                    li.innerText = item.name + ":" + item.content;
                     this.messageList.appendChild(li);
                 });
             }).then(function(todos) {
@@ -60,15 +61,19 @@
             });
         },
         saveMessage: function() {
+            let name = this.form.querySelector("input[name=name]").value;
+            console.log(name)
             let content = this.form.querySelector("input[name=content]").value;
             if(content === "") {
                 alert("请输入内容：");
             } else {
-                model.save(content).then((object) => {
-                    let content = this.form.querySelector("input[name=content]").value;
-                    let messageList = document.querySelector("#messageList");
+                model.save({
+                    name: name,
+                    content: content,
+                }).then((object) => {
+                    let messageList = this.view.querySelector("#messageList");
                     let li = document.createElement("li");
-                    li.innerText = content;
+                    li.innerText = name + ":" + content;
                     messageList.appendChild(li);
                     this.form.querySelector("input[name=content]").value = "";
                 });
