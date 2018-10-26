@@ -1,6 +1,7 @@
 
 !function(){
-    var view = document.getElementById("siteWelcome");
+    // var view = document.getElementById("siteWelcome");
+    var view = View("#siteWelcome");
     var controller = {
         view: null,
 

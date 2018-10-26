@@ -1,5 +1,6 @@
 !function() {
-    var view = document.querySelectorAll('.first-navigator a');
+    // var view = document.querySelectorAll('.first-navigator a');
+    var view = View('.first-navigator a');
     var controller = {
         view: null,
         init: function(view) {

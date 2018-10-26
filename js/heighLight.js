@@ -1,5 +1,6 @@
 !function() {
-    var view = document.querySelectorAll("[section-x]");
+    // var view = document.querySelectorAll("[section-x]");
+    var view = View("[section-x]");
     var controller = {
         view: null,
 
