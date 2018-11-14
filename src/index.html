@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <!--loading-->
+    <div id="siteWelcome" class="site-welcome active">
+        <div class="loading"></div>
+    </div>
+    <!--navTopBar-->
+    <div class="Banner">
+        <div class="navTopBar-container"><div id="navTopBar" class="navTopBar clearfix">
+            <a class="logo left" href="#">
+                <span class="rs">RS</span>
+                <span class="card">card</span>
+            </a>
+            <nav class="navigator right">
+                <ul class="clearfix">
+                    <li class="left first-navigator"><a href="#userAbout">关于</a></li>
+                    <li class="left first-navigator"><a href="#progressSkills">技能</a></li>
+                    <li class="left first-navigator">
+                        <a href="#portfolio">作品</a>
+                        <ul class="sub-navigator">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
+                    </li>
+                    <li class="left first-navigator"><a href="#">博客</a></li>
+                    <li class="left first-navigator"><a href="#">日历</a></li>
+                    <li class="left first-navigator"><a href="#">联系方式</a></li>
+                    <li class="left first-navigator"><a href="#">其他</a></li></ul>
+            </nav>
+        </div></div>
+        <div class="mask"></div>
+    </div>
+
+    <div class="content-container">
+        <div section-x id="userAbout" class="user-card">
+            <div class="picture-and-text clearfix">
+                <img class="avatar left" src="./img/avatar.jpg" alt="头像"/>
+                <div class="text left">
+                    <span class="hello">hello</span>
+                    <h1 class="name">Jason Shu</h1>
+                    <p>前端开发工程师</p>
+                    <hr/>
+                    <dl class="clearfix">
+                        <dt>年龄</dt>
+                        <dd>23</dd>
+                        <dt>所在城市</dt>
+                        <dd>武汉</dd>
+                        <dt>邮箱</dt>
+                        <dd>445152396@qq.com</dd>
+                        <dt>手机</dt>
+                        <dd>123456666</dd>
+                    </dl>
+                </div>
+            </div>
+            <footer class="media text-center">
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+            </footer>
+        </div>
+        <div class="download-btn text-center"><a  class="download-link" href="./index.html" download>Download Resume</a></div>
+        <p class="self-introduction text-center">大家好，我叫舒越，你们可以叫我Jason_Shu，初学前端，好好努力！</p>
+        <div section-x id="progressSkills" class="progress-skills">
+            <h2 class="progress-skills-title text-center">Professional Skills</h2>
+            <ul class="skills-wrapper clearfix">
+                <li ><p class="skill-name">WordPress</p><div class="progress"></div></li>
+                <li ><p class="skill-name">HTML & CSS</p><div class="progress"></div></li>
+                <li ><p class="skill-name">JavaScript</p><div class="progress"></div></li>
+                <li ><p class="skill-name">PHP & MySQL</p><div class="progress"></div></li>
+                <li ><p class="skill-name">Drupal</p><div class="progress"></div></li>
+                <li ><p class="skill-name">Photoshop</p><div class="progress"></div></li>
+            </ul>
+        </div>
+        <div section-x id="portfolio" class="portfolio text-center">
+            <h2 class="portfolio-title text-center">Portfolio</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <img src="./img/profile/nav-demo.png" alt="nav-demo" class="swiper-slide">
+                    <img src="./img/profile/canvas-demo.png" alt="canvas-demo" class="swiper-slide">
+                    <img src="./img/profile/Apple-like-slider-demo.png" alt="Apple-like-slider-demo" class="swiper-slide">
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+        <!--留言板-->
+        <div id="message">
+            <h2 class="portfolio-title text-center">留言</h2>
+            <ol id="messageList">
+
+            </ol>
+            <form id="myForm" style="width: 700px; height: 500px; margin: auto;">
+                用户：<input type="text" name="name">
+                内容：<input type="text" name="content">
+                <input type="submit" value="提交">
+            </form>
+        </div>
+
+    </div>
+    <script src="js/View.js"></script>
+    <script src="js/Model.js"></script>
+    <script src="js/Controller.js"></script>
+    <script src="//at.alicdn.com/t/font_808483_c3442kk5mms.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+    <!--模块化-->
+    <script src="js/loading.js"></script>
+    <script src="js/auto-scroll-smoothly.js"></script>
+    <script src="js/heighLight.js"></script>
+    <script src="js/slide-up.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sticky-topbar.js"></script>
+    <script src="js/message.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+</html>
